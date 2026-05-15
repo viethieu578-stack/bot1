@@ -67,5 +67,11 @@ async def clear_bxh(ctx):
     global tournament_bxh
     tournament_bxh = {}
     await ctx.send("🧹 Đã reset toàn bộ điểm số giải đấu!")
-
+from flask import Flask
+from threading import Thread
+app = Flask('')
+@app.route('/')
+def home(): return "Bot Online!"
+def run(): app.run(host='0.0.0.0', port=10000)
+Thread(target=run).start()
 bot.run(os.getenv('DISCORD_TOKEN'))
