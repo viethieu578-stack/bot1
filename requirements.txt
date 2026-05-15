@@ -1,0 +1,6 @@
+discord.py
+requests
+pandas
+matplotlib
+tabulate
+python-dotenv
